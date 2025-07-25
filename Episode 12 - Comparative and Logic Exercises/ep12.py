@@ -7,14 +7,14 @@ inputan kurang dari 3 bernilai True dan lebih dari 7 bernilai
 True, untuk inputan angka di antara 3 dan 7 akan bernilai False
 """
 
-# print("+++++++3-------7++++++++")
-# inputUser = float(input("masukkan angka : "))
+print("+++++++3-------7++++++++")
+inputUser = float(input("masukkan angka : "))
 
-# isLowerThan = inputUser < 3
-# isHigherThan = inputUser > 7
+isLowerThan = inputUser < 3
+isHigherThan = inputUser > 7
 
-# result = isLowerThan or isHigherThan  
-# print("Hasilnya adalah = ", result)
+result = isLowerThan or isHigherThan  
+print("Hasilnya adalah = ", result)
 
 
 """
