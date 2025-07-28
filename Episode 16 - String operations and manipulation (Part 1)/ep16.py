@@ -52,5 +52,5 @@ print("char untuk ASCII 117 adalah" + chr(data))
 # 4. Operator dalam bentuk method
 
 data = "Aqua 100 persen Murni"
-jumlah = data.count("a")
+jumlah = data.count("a")    # count() adalah sebuah tehod yang digunakan untuk object "data"
 print("Jumlah a pada " + data + " = " + str(jumlah)) # Terhitung satu karena untuk character 'a' hanya ada satu.
