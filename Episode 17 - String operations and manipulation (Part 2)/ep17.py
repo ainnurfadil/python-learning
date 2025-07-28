@@ -2,11 +2,19 @@
 print("\n--- Merubah Case ---")
 salam = "bro"
 salam_upper = salam.upper()
+<<<<<<< Updated upstream
 print(f"Original: '{salam}', Upper: '{salam_upper}'")
 
 alay = "aKu KeCe AbieS"
 alay_lower = alay.lower()
 print(f"Original: '{alay}', Lower: '{alay_lower}'")
+=======
+print("Original: ",salam, "Upper: ",salam_upper)
+
+alay = "aKu KeCe AbieS"
+alay_lower = alay.lower()
+print("Original: ",alay, "Upper: ",alay_lower)
+>>>>>>> Stashed changes
 
 # 2. Pengecekan dengan Method isX()
 print("\n--- Pengecekan dengan isX() ---")
