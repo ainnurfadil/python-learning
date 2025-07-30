@@ -1,4 +1,4 @@
-'''**kwargs'''
+# **kwargs
 
 def fungsi(nama,tinggi,berat):
     '''fungsi biasa'''
