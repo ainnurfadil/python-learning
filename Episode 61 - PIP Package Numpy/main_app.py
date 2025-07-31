@@ -23,3 +23,12 @@ print(f'vector_a = {vector_a**5}')
 matrix_b = np.array([(2,4),(6,8)])      # Fungsi untuk menampilkan array
 print(f'matrix_b = \n{matrix_b}')
 print(f'matrix_b = \n{matrix_b**2}')    # Ketika array dipangkatkan
+
+zeros_c = np.zeros((2,2))
+print(f'zeros c = \n{zeros_c}')
+
+ones_d = np.ones((2,2))
+print(f'ones d = \n{ones_d}')
+
+jumlah = matrix_b + matrix_b**2 + ones_d
+print('\nJumlah matrix_b + matrix_b**2 + ones_d\n',jumlah)
