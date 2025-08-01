@@ -9,7 +9,7 @@ print(f"status write : {file.writable()}")
 ## baca seluruh file
 print(file.read())
 
-## baca per baris
+## baca per baris dari file yang dibacaa
 # print(file.readline(),end="") # baca baris pertama
 # print(file.readline(),end="") # baca baris kedua
 
