@@ -2,8 +2,23 @@ import os
 import CRUD as CRUD
 
 if __name__ == "__main__":
-    sistem_operasi = os.name
+    sistem_operasi = os.name # os.name berfungsi untuk melihat OS apa yang digunakan ketika menjalankan program ini
     
+    match sistem_operasi:   # Syntax 'match' untuk menyesuaikan keadaan progam yang akan di jalankan
+        case "posix": os.system("clear")
+        case "nt": os.system("cls")
+
+    print("SELAMAT DATANG DI PROGRAM")
+    print("DATABASE PERPUSTAKAAN")
+    print("=========================")
+
+    CRUD.init_console()
+
+    """
+    proses di atas akan di proses pertama kali sebelum memasuki ke proses while loop.
+    Jadi akan di cek terlebih dahulu untuk databasenya apakah sudah ada atau belum.
+    """
+
     while(True):
         match sistem_operasi:   # Syntax 'match' untuk menyesuaikan keadaan progam yang akan di jalankan
             case "posix": os.system("clear")
@@ -23,8 +38,8 @@ if __name__ == "__main__":
         print("\n=========================\n")
 
         match user_option:
-            case "1": print("Read Data")
-            case "2": print("Create Data")
+            case "1": CRUD.read_console()
+            case "2": CRUD.create_console()
             case "3": print("Update Data")
             case "4": print("Delete Data")
 
@@ -33,4 +48,6 @@ if __name__ == "__main__":
         if is_done == "y" or is_done == "Y":
             break
 
-    print("Program Berakhir, Terima Kasiih KAKAAAAA")
+    print("Program Berakhir")
+
+    

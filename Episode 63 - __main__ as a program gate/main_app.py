@@ -1,4 +1,5 @@
-# __main__ adalah top level code environment
+# __main__ Top Level Code Environment
+
 
 # __name__ == "__main__" akan terjadi 
 # jika ada di file program utama
