@@ -46,12 +46,60 @@ def read_console():
         print(f"{index+1:4} | {judul:.40} | {penulis:.40} | {tahun:4}",end="")
         """
         Index dalam print, memulai dari angka 0 jadi ketika mau start di angka 1 ditambahkan 1.
-
         """
     # Footer
     print("="*100+"\n")
 
 def update_console():
     read_console()
-    index_buku = int(input('Pilih nomor buku : '))
+    while(True):
+        print("Pilih nomor buku yang tertera di tampilan untuk di update")
+        no_buku = int(input('Pilih nomor buku : '))
+        data_buku = Operasi.read(index=no_buku)
+
+        if data_buku:
+            break
+        else:
+            print("Nomor tidak valid")
+
+    data_break = data_buku.split(',')
+    pk = data_break[0]
+    data_add = data_break[1]
+    judul = data_break[3]
+    penulis = data_break[2]
+    tahun = data_break[4][:-1]
+
+    while (True):
+        print("\n"+"="*100)
+        print("silahkan pilih data apa yang ingin diubah")
+        print(f"1. Judul\t: {judul:.40}")
+        print(f"2. Penulis\t: {penulis:.40}")
+        print(f"3. Tahun\t: {tahun:4}")
+
+        user_option = input("Pilih yang akan di edit [1,2,3]: ")
+        print("\n"+"="*100)
+        match user_option:
+            case "1": judul = input("Judul\t: ")
+            case "2": penulis = input("Penulis\t: ")
+            case "3":     
+                while(True):
+                    try:
+                        tahun = int(input("Tahun\t: "))
+                        if len(str(tahun)) == 4:
+                            break
+                        else:
+                            print("Tahun tidak lebih dari 4 angka (YYYY)")
+                    except:
+                        print("Tahun harus angka")
+            case _: print("Index tidak ada.")
+
+        print("Data Baru")
+        print(f"1. Judul\t: {judul:.40}")
+        print(f"2. Penulis\t: {penulis:.40}")
+        print(f"3. Tahun\t: {tahun:4}")
+        is_done = input("Apakah sudah cocok (y/n)? ")
+        if is_done == "y" or is_done == "Y":
+            break
     
+    Operasi.update(no_buku,pk,data_add,judul,penulis,tahun)
+
